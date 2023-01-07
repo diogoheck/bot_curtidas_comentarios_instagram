@@ -1,6 +1,16 @@
 import pyautogui
 import webbrowser
 from time import sleep
+
+
+def logout():
+    pyautogui.click(144, 365, duration=1)
+    sleep(1)
+    pyautogui.click(78, 679, duration=1)
+    sleep(1)
+    pyautogui.click(69, 621, duration=1)
+
+
 while (True):
     # entrar no instagram
     webbrowser.open('https://www.instagram.com/')
@@ -24,7 +34,7 @@ while (True):
     pyautogui.click(90, 286, duration=2)
     sleep(2)
     # digitar a conta que deseja curtir e entrar
-    pyautogui.typewrite('ofc_tsubibi')
+    pyautogui.typewrite('nike')
     sleep(3)
     pyautogui.press('enter')
     sleep(3)
@@ -35,12 +45,14 @@ while (True):
     sleep(5)
     if not pyautogui.locateCenterOnScreen('coracao.png'):
         # curtir
-        pyautogui.click(662, 568, duration=2)
+        pyautogui.click(598, 567, duration=2)
         sleep(2)
-        pyautogui.click(728, 672, duration=1)
+        pyautogui.click(671, 678, duration=1)
         # comentar
-        pyautogui.typewrite('muito gata!')
+        pyautogui.typewrite('top!')
         sleep(1)
         # postar
-        pyautogui.click(1106, 678, duration=1)
+        pyautogui.click(1040, 678, duration=1)
+        sleep(1)
+    logout()
     sleep(86400)
